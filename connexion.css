@@ -1,0 +1,128 @@
+body {
+    background-image: url('entrepot.jpg');
+    /* Remplacez par le chemin de votre image de fond */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fond vert transparent */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 i {
+    margin-right: 10px;
+}
+
+.dashboard-container {
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fond noir transparent */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-in-out;
+    text-align: center;
+}
+
+.dashboard-container h1 {
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.dashboard-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fond blanc transparent */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.dashboard-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Fond blanc transparent au survol */
+}
+
+.logout-btn {
+    background-color: #ff6347;
+    /* Rouge clair */
+}
+
+.logout-btn:hover {
+    background-color: #ff4737;
+    /* Rouge plus foncé au survol */
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fond vert transparent */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #d4af37;
+    /* Doré au survol */
+}
+
+/* Animation de fondu */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,34 @@
+<?php
+// Connexion à la base de données
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "gestion_stock";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fonction pour enregistrer un mouvement de stock
+function enregistrerMouvementStock($id_article, $type, $quantite, $conn) {
+    $stmt = $conn->prepare("INSERT INTO mouvements_stock (id_article, type, quantite) VALUES (?, ?, ?)");
+    $stmt->bind_param("iss", $id_article, $type, $quantite);
+    $stmt->execute();
+    $stmt->close();
+}
+
+// Exemple d'utilisation : enregistrer une entrée (commande d'achat)
+$id_article = 1;
+$quantite_entree = 50;
+enregistrerMouvementStock($id_article, 'entree', $quantite_entree, $conn);
+
+// Exemple d'utilisation : enregistrer une sortie (vente)
+$id_article = 1;
+$quantite_sortie = 10;
+enregistrerMouvementStock($id_article, 'sortie', $quantite_sortie, $conn);
+
+// Fermer la connexion
+$conn->close();
+?>

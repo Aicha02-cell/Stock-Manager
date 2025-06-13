@@ -1,0 +1,94 @@
+body {
+    font-family: cursive;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    margin: 2em auto;
+    padding: 2em;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(117deg, rgba(2, 0, 36, 1) 0%, rgba(125, 129, 150, 0.9757503221014968) 96%, rgba(222, 199, 45, 1) 98%, rgba(142, 49, 242, 0.5859143339953169) 98%);
+    border-radius: 1.25rem;
+    max-width: 800px;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 1em;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+label {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: rgb(2, 0, 36);
+    color: inherit;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background: rgba(2, 0, 36, 0.8);
+}
+.link {
+    display: block;
+    margin-top: 1.5em;
+    text-decoration: none;
+    color: #FFD700;
+}
+.error {
+    color: red;
+}
+.success {
+    color: green;
+}
+.mtable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+.mtable th, .mtable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.mtable th {
+    background-color: #f2f2f2;
+}
+.pagination {
+    margin-top: 1em;
+}
+.pagination a {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #000;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+.pagination a.active {
+    background-color: #007bff;
+    color: #fff;
+}
